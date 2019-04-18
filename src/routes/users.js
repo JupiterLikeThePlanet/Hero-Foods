@@ -1,4 +1,6 @@
 const express = require('express');
+var bodyParser = require('body-parser')
+
 const usersOriginal = require('../data/users');
 const { check, validationResult } = require('express-validator/check');
 
@@ -27,8 +29,8 @@ module.exports = app => {
       validationResult(req).throw();
       userCount += 1;
       usersCopy.push({
-        id: userCount,
-        ...req.body
+        id: userCount
+        //, ...req.body
       })
       res.json({
         success: userCount
