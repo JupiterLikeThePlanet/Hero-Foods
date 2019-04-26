@@ -20,10 +20,10 @@ class HeroList extends Component {
         super();
         this.state = {
             heroList: [],
-            hero_name: 'vision',
-            first_name: 'paul',
-            last_name: 'bettany',
-            favorite_food: 'candy'
+            hero_name: '',
+            first_name: '',
+            last_name: '',
+            favorite_food: ''
         };
 
         // this.handlePageChange = this.handlePageChange.bind(this);
@@ -47,19 +47,17 @@ class HeroList extends Component {
         return (
             <div>
                 <h1>Heros and Hero Foods</h1>
-                <Hero/>
-                                        <Item.Group>
-                            {
-                                heroList.map((hero, index) => (
-                                    <Hero
-                                        key={index}
-                                        hero_name={hero.hero_name}
-                                        favorite_food={hero.favorite_food}
-                                        count={index + 1}
-                                    />
-                                ))
-                            }
-                        </Item.Group>
+                <Item.Group>
+                    {
+                        heroList.map((hero, index) => (
+                            <Hero
+                                key={index}
+                                hero_name={hero.hero_name}
+                                favorite_food={hero.favorite_food}
+                            />
+                        ))
+                    }
+                </Item.Group>
 
 
 

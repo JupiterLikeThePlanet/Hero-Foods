@@ -16,11 +16,8 @@ const Hero = (props) => (
     <div className="row">
         <Responsive as={Segment}>
             <Item.Content>
-
                 <Item.Extra> <strong>Hero Name :</strong> {props.hero_name} </Item.Extra>
                 <Item.Extra> <strong>Favorite Food : </strong>{props.favorite_food} </Item.Extra>
-
-
             </Item.Content>
         </Responsive>
         
