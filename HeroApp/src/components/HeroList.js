@@ -1,14 +1,15 @@
 import React, {
-    Component,
-    Fragment
+    Component
 } from "react";
+import ReactDOM from 'react-dom';
 import axios from "axios";
+import Hero from './Hero';
 
-class Dashboard extends Component {
+class HeroList extends Component {
     constructor(props) {
         super();
         this.state = {
-            heroList: []
+            heroList: [],
             hero_name: 'vision',
             first_name: 'paul',
             last_name: 'bettany',
@@ -38,7 +39,8 @@ class Dashboard extends Component {
         
         return (
             <div>
-                <h1>HELLLOOOOO NUUUURSSEEEE</h1>
+                <h1>Heros and Hero Foods</h1>
+                <Hero/>
             </div>
            
         );
