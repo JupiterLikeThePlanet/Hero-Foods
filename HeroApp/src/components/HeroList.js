@@ -4,6 +4,7 @@ import React, {
 import ReactDOM from 'react-dom';
 import axios from "axios";
 import Hero from './Hero';
+import heroData from '../data/users.js'
 
 class HeroList extends Component {
     constructor(props) {
@@ -20,19 +21,17 @@ class HeroList extends Component {
 
 
     }
+    
 
-    // componentDidMount() {
+    componentDidMount() {
     //     if (this.props.clients.length === 0) {
     //         // if the page is refreshed
     //         this.props.getClients(); // call axios from redux -> update props
     //     }
-    //     this.setState({
-    //         clients: this.props.clients,
-    //         searchResults: [],
-    //         searchLookupValue: "",
-    //         searchSelection: "" // reset search component
-    //     });
-    // }
+        this.setState({
+            heroList: heroData,
+        });
+    }
 
 
     render() {
