@@ -24,10 +24,8 @@ class HeroList extends Component {
     
 
     componentDidMount() {
-    //     if (this.props.clients.length === 0) {
-    //         // if the page is refreshed
-    //         this.props.getClients(); // call axios from redux -> update props
-    //     }
+        heroData.sort((a, b) => (a.id > b.id) ? 1 : -1)
+        
         this.setState({
             heroList: heroData,
         });
